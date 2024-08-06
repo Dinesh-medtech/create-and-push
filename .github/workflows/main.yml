@@ -35,7 +35,7 @@ jobs:
 
     - name: Commit and push changes
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }} # Use your PAT here
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
         git config --global user.name 'Dinesh-medtech'
         git config --global user.email 'dineshkumar@medtechsoft.co'
