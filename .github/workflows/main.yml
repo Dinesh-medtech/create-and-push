@@ -35,7 +35,7 @@ jobs:
 
     - name: Commit and push changes
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        GITHUB_TOKEN: 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
       run: |
         git config --global user.name 'Dinesh-medtech'
         git config --global user.email 'dineshkumar@medtechsoft.co'
