@@ -13,6 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Configure Git
+      run: |
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+
     - name: Generate report
       run: |
         echo "## Report generated on $(date)" > report.md
@@ -42,6 +47,7 @@ jobs:
           branch: main
           repository: ${{ github.create-and-push }}
           github-token: ${{ secrets.PAT_TOKEN }}
+
 
 
     # - uses: jasineri/simple-push-action@v2
