@@ -37,3 +37,5 @@ jobs:
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.PAT_TOKEN }}
+        branch: main  # Ensure this matches your branch name
+        directory: .   # Ensure this is correct if pushing from the root directory
