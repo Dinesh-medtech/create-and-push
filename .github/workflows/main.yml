@@ -33,13 +33,23 @@ jobs:
         echo "### Repository Files:" >> report.md
         ls -1 >> report.md
 
-    - uses: jasineri/simple-push-action@v2
+    - name: Push changes
+      uses: zakiego/just-git-push@main
       with:
-          repository: ${{ github.create-and-push  }}
+          USERNAME: "github-actions[bot]"
+          EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+          COMMIT_MESSAGE: "This is an automated commit by GitHub Actions."
+          BRANCH: ${{ github.main }}
+          REPOSITORY: ${{ github.create-and-push }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+    # - uses: jasineri/simple-push-action@v2
+    #   with:
+    #       repository: ${{ github.create-and-push  }}
     
-          token: ${{ github.PAT_TOKEN }}
+    #       token: ${{ github.PAT_TOKEN }}
      
-          message: 'Update from Github Action at `date`'
+    #       message: 'Update from Github Action at `date`'
     
         
 
