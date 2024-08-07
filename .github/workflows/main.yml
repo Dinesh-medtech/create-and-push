@@ -13,11 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Configure Git
-      run: |
-        git config --global user.email "dineshkumar@medtechsoft.co"
-        git config --global user.name "Dinesh-medtech"
-
     - name: Generate report
       run: |
         echo "## Report generated on $(date)" > report.md
@@ -40,8 +35,8 @@ jobs:
 
     - name: Configure Git
       run: |
-          git config --global user.name "vignesh1424"
-          git config --global user.email "vignesh.s@medtechsoft.co"
+          git config --global user.name "Dinesh-medtech"
+          git config --global user.email "dineshkumar@medtechsoft.co"
     - name: Commit and Push changes
       run: |
           git add .
