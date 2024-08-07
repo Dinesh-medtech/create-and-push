@@ -43,7 +43,7 @@ jobs:
           git commit -m "Update generated files by github action"
           git push
       env:
-          GITHUB_TOKEN: ${{github.PAT_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.PAT_TOKEN}}
         
     # - name: Configure Git
     #   run: |
