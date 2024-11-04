@@ -12,5 +12,7 @@ jobs:
       - name: Set version
         run: |
           branch_name="${GITHUB_REF##*/}"
+          echo "$branch_name"
           version="${branch_name#release/}"
+          echo "$version"
           echo "Formatted version: v$version"
