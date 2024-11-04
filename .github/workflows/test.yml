@@ -1,0 +1,16 @@
+name: Format Version
+
+on:
+  push:
+    branches:
+      - release/*
+
+jobs:
+  format_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set version
+        run: |
+          branch_name="${GITHUB_REF##*/}"
+          version="${branch_name#release/}"
+          echo "Formatted version: v$version"
